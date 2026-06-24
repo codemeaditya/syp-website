@@ -601,3 +601,9 @@ border-radius:15px;
 margin-bottom:20px;
 border:3px solid var(--gold);
 }
+.footer-tagline{
+color:#D4AF37;
+margin:15px 0;
+font-size:0.95rem;
+line-height:1.6;
+}
