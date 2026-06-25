@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codemeaditya.github.io/syp-website/sitemap.xml
