@@ -607,3 +607,15 @@ margin:15px 0;
 font-size:0.95rem;
 line-height:1.6;
 }
+.developer-credit{
+    text-align:center;
+    font-size:14px;
+    color:rgba(255,255,255,0.8);
+    letter-spacing:0.5px;
+    margin-top:10px;
+}
+
+.developer-credit strong{
+    color:#D4AF37;
+    font-weight:600;
+}
