@@ -1018,7 +1018,7 @@ text-align:center;
 
 }
 
-
+}
 /*==========================
 SCROLL REVEAL
 ===========================*/
@@ -1073,3 +1073,106 @@ box-shadow:
 0 0 30px rgba(212,175,55,.35);
 
 }
+  /*==========================
+SECTION PREMIUM EFFECT
+===========================*/
+
+.section h2{
+    position:relative;
+    display:inline-block;
+}
+
+
+.section h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:-10px;
+
+width:70px;
+height:3px;
+
+background:var(--gold);
+
+transform:translateX(-50%);
+
+border-radius:20px;
+
+}
+
+
+.section-text{
+
+font-size:1.05rem;
+
+line-height:1.9;
+
+}
+
+
+/* CARD ENTRY */
+
+.card{
+
+opacity:0;
+
+transform:translateY(40px);
+
+animation:cardShow .8s ease forwards;
+
+}
+
+
+.card:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+
+.card:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+
+@keyframes cardShow{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* MOBILE CARD */
+
+@media(max-width:600px){
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+.section h2{
+
+font-size:2rem;
+
+}
+
+  }
