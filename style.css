@@ -360,29 +360,41 @@ clamp(3rem,8vw,6rem);
 
 .hero h2{
 
-font-size:
-
-clamp(1.6rem,4vw,2.5rem);
+font-size:clamp(1.8rem,4vw,2.8rem);
 
 color:var(--gold);
 
-margin-top:10px;
+margin-top:8px;
+
+font-family:'Playfair Display',serif;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-shadow:
+0 0 15px rgba(212,175,55,.18);
+
+transition:.3s ease;
 
 }
-
 .hero p{
 
-margin-top:20px;
+margin-top:24px;
 
 color:var(--text);
 
 font-size:1.1rem;
 
-max-width:700px;
+max-width:720px;
 
 margin-left:auto;
 
 margin-right:auto;
+
+line-height:1.8;
+
+opacity:.95;
 
 }
 
@@ -412,11 +424,16 @@ border-radius:50px;
 
 font-weight:600;
 
-transition:.3s;
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+background .35s ease,
+color .35s ease;
 
 display:inline-block;
 
 }
+
 
 .primary{
 
@@ -428,13 +445,10 @@ color:black;
 
 .primary:hover{
 
-transform:translateY(-4px);
+transform:translateY(-4px) scale(1.03);
 
 box-shadow:
-
-0 15px 30px
-
-rgba(212,175,55,.3);
+0 18px 35px rgba(212,175,55,.35);
 
 }
 
