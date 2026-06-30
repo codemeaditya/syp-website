@@ -650,10 +650,39 @@ border:1px solid rgba(212,175,55,.10);
 
 backdrop-filter:blur(10px);
 
-transition:.3s ease;
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
+
+animation:statFloat 4s ease-in-out infinite;
 
 }
 
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:
+0 20px 45px rgba(212,175,55,.25);
+
+}
+
+
+@keyframes statFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+}
 .stat-card:hover{
 
 transform:translateY(-5px);
@@ -758,15 +787,28 @@ padding:40px;
 border-radius:25px;
 
 background:
-
-rgba(255,255,255,.04);
+rgba(255,255,255,.05);
 
 border:
+1px solid rgba(212,175,55,.18);
 
-1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+
+transition:.4s ease;
 
 }
 
+
+.founder-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 25px 50px rgba(212,175,55,.18);
+
+border-color:var(--gold);
+
+}
 .founder-content{
 
 display:flex;
@@ -985,19 +1027,31 @@ text-align:center;
 
 }
 
-}
-/*==========================
+}/*==========================
 SCROLL REVEAL
 ===========================*/
 
 .reveal{
-    opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, transform;
+    opacity:0;
+    transform:translateY(70px) scale(.98);
+    filter:blur(4px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease,
+    filter .8s ease;
+
+    will-change:transform,opacity;
 }
 
 .reveal.active{
-    opacity: 1;
-    transform: translateY(0);
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
+    filter:blur(0);
+
 }
