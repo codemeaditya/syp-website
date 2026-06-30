@@ -71,19 +71,39 @@ revealOnScroll();
    HAMBURGER MENU
 ========================= */
 
-const menuToggle =
-    document.getElementById("menuToggle");
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
 
-const nav =
-    document.getElementById("nav");
-
+/* Open / Close menu */
 menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+/* Link click par menu band */
+document.querySelectorAll("#nav a").forEach(link => {
     
-    nav.classList.toggle("show");
+    link.addEventListener("click", () => {
+        
+        nav.classList.remove("active");
+        
+    });
     
 });
 
+/* Bahar click karne par menu band */
 
+document.addEventListener("click", (e) => {
+    
+    if (
+        !nav.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ) {
+        
+        nav.classList.remove("active");
+        
+    }
+    
+});
 /* =========================
    OUTSIDE CLICK CLOSE
 ========================= */
