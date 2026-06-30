@@ -292,21 +292,57 @@ padding:20px;
 
 display:inline-block;
 
-padding:10px 18px;
+padding:12px 22px;
 
-border-radius:30px;
+border-radius:50px;
 
-border:1px solid var(--gold);
+border:1px solid rgba(212,175,55,.6);
 
 color:var(--gold);
 
-background:
+background:rgba(255,255,255,.06);
 
-rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
 
-margin-bottom:25px;
+-webkit-backdrop-filter:blur(12px);
 
-backdrop-filter:blur(10px);
+margin-bottom:28px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+box-shadow:
+0 0 20px rgba(212,175,55,.12);
+
+transition:.35s ease;
+
+animation:badgeGlow 3s ease-in-out infinite;
+
+}
+
+.hero-badge:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 30px rgba(212,175,55,.25);
+
+}
+
+@keyframes badgeGlow{
+
+0%,100%{
+
+box-shadow:0 0 18px rgba(212,175,55,.10);
+
+}
+
+50%{
+
+box-shadow:0 0 32px rgba(212,175,55,.25);
+
+}
 
 }
 
