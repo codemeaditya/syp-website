@@ -253,25 +253,6 @@ background-position:center;
 background-repeat:no-repeat;
 
 background-attachment:fixed;
-  .hero::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.35),
-transparent
-);
-
-z-index:1;
-
-    }
-
 .hero-overlay{
 
 position:absolute;
@@ -297,8 +278,6 @@ transparent 55%
 position:relative;
 
 z-index:2;
-  animation:heroFade 2s ease;
-
 max-width:850px;
 
 padding:20px 25px;
@@ -1099,16 +1078,3 @@ box-shadow:
 0 0 30px rgba(212,175,55,.35);
 
 }
-  @keyframes heroFade{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-  }
