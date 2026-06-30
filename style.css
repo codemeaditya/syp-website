@@ -297,7 +297,7 @@ transparent 55%
 position:relative;
 
 z-index:2;
-  animation:heroFade 1s ease;
+  animation:heroFade 2s ease;
 
 max-width:850px;
 
