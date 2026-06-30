@@ -282,9 +282,11 @@ position:relative;
 
 z-index:2;
 
-max-width:900px;
+max-width:850px;
 
-padding:20px;
+padding:20px 25px;
+
+margin:auto;
 
 }
 
