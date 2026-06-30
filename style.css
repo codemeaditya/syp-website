@@ -589,7 +589,6 @@ LEADERS
 .leader-img{
 
 width:130px;
-
 height:130px;
 
 border-radius:50%;
@@ -599,6 +598,19 @@ border:3px solid var(--gold);
 object-fit:cover;
 
 margin:0 auto 20px;
+
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+
+}
+
+.leader-img:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 30px rgba(212,175,55,.35);
 
 }
 
