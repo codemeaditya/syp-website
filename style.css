@@ -253,10 +253,11 @@ background-position:center;
 background-repeat:no-repeat;
 
 background-attachment:fixed;
+
 }
 
-.hero-overlay{
 
+.hero-overlay{
 position:absolute;
 
 inset:0;
