@@ -550,21 +550,21 @@ border:
 
 backdrop-filter:blur(14px);
 
-transition:.3s;
-
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
 
 border-color:var(--gold);
 
 box-shadow:
-
-0 15px 35px
-
-rgba(212,175,55,.15);
+0 20px 45px
+rgba(212,175,55,.22);
 
 }
 
