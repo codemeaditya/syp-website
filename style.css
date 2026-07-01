@@ -1292,6 +1292,166 @@ SCROLL REVEAL
 
 }
 
+/*==========================
+CONTACT SECTION
+===========================*/
+
+.contact-card-link{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    min-height:220px;
+
+    text-align:center;
+
+    color:white;
+
+    padding:35px 25px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+    text-decoration:none;
+}
+
+.contact-card-link:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+    0 20px 45px rgba(212,175,55,.22);
+}
+
+.contact-card-link h3{
+
+    color:var(--gold);
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+    letter-spacing:1px;
+
+    font-weight:700;
+}
+
+.contact-card-link p{
+
+    color:var(--text);
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    word-break:break-word;
+
+    margin:0;
+}
+
+
+/* CONTACT CTA */
+
+.contact-cta{
+
+    max-width:850px;
+
+    margin:60px auto 0;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(212,175,55,.15);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    transition:.35s ease;
+}
+
+.contact-cta:hover{
+
+    border-color:var(--gold);
+
+    box-shadow:
+    0 20px 45px rgba(212,175,55,.15);
+}
+
+.contact-cta h3{
+
+    color:var(--gold);
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+    font-family:
+    'Playfair Display',
+    serif;
+}
+
+.contact-cta p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .contact-card-link{
+
+        min-height:180px;
+
+        padding:30px 20px;
+    }
+
+    .contact-card-link h3{
+
+        font-size:1.4rem;
+    }
+
+    .contact-card-link p{
+
+        font-size:.95rem;
+    }
+
+    .contact-cta{
+
+        padding:30px 25px;
+    }
+
+    .contact-cta h3{
+
+        font-size:1.7rem;
+    }
+}
 
 /*==========================
 GUEST IMAGE
