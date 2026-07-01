@@ -893,85 +893,325 @@ backdrop-filter:blur(14px);
 }
 
 /*==========================
-FOOTER PREMIUM
+PREMIUM FOOTER
 ===========================*/
+
+.footer{
+
+    background:
+    linear-gradient(
+        180deg,
+        #03122f 0%,
+        #021127 50%,
+        #010a1c 100%
+    );
+
+    padding:80px 8% 50px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-top:
+    1px solid rgba(212,175,55,.15);
+}
+
+
+/* GOLD GLOW */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(212,175,55,.12),
+        transparent 70%
+    );
+
+    top:-220px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    pointer-events:none;
+}
+
+
+.footer-content{
+    position:relative;
+    z-index:2;
+}
+
+
+/* LOGO */
 
 .footer-logo{
 
-width:90px;
-height:90px;
+    width:95px;
+    height:95px;
 
-border-radius:50%;
+    border-radius:50%;
 
-object-fit:cover;
+    object-fit:cover;
 
-border:3px solid var(--gold);
+    border:3px solid var(--gold);
 
-padding:4px;
+    padding:5px;
 
-box-shadow:
-0 0 25px rgba(212,175,55,.25);
+    margin:auto;
 
-transition:.35s ease;
+    box-shadow:
+    0 0 30px rgba(212,175,55,.25);
 
+    transition:.4s;
 }
-
 
 .footer-logo:hover{
 
-transform:scale(1.08) rotate(5deg);
+    transform:
+    scale(1.08)
+    rotate(5deg);
 
-box-shadow:
-0 0 40px rgba(212,175,55,.45);
-
+    box-shadow:
+    0 0 45px rgba(212,175,55,.45);
 }
 
 
-footer p{
+/* TITLE */
 
-color:var(--text);
+.footer-title{
 
+    margin-top:25px;
+
+    font-size:2rem;
+
+    color:white;
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-weight:700;
 }
 
 
-.footer-links a{
+.footer-tagline{
 
-padding:8px 15px;
+    max-width:750px;
 
-border-radius:50px;
+    margin:20px auto;
 
-background:rgba(255,255,255,.04);
+    color:var(--text);
 
-border:1px solid rgba(255,255,255,.08);
+    line-height:1.9;
 
+    font-size:1.05rem;
 }
 
 
-.footer-links a:hover{
+/* SOCIAL */
 
-background:var(--gold);
+.footer-social{
 
-color:black;
+    display:flex;
 
-transform:translateY(-3px);
+    justify-content:center;
 
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
 }
 
 
-@media(max-width:600px){
+.social-btn{
 
-.footer-links{
+    padding:14px 30px;
 
-gap:12px;
+    border-radius:50px;
 
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
 }
 
-.footer-logo{
 
-width:75px;
-height:75px;
+/* WHATSAPP */
 
+.whatsapp{
+
+    background:
+    linear-gradient(
+        135deg,
+        #25D366,
+        #128C7E
+    );
 }
+
+
+/* INSTAGRAM */
+
+.instagram{
+
+    background:
+    linear-gradient(
+        135deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+}
+
+
+.social-btn:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
+}
+
+
+/* DIVIDER */
+
+.footer-divider{
+
+    width:120px;
+    height:2px;
+
+    background:var(--gold);
+
+    margin:35px auto;
+
+    border-radius:50px;
+}
+
+
+/* COPYRIGHT */
+
+.footer-copy{
+
+    color:#bdbdbd;
+
+    font-size:.95rem;
+
+    margin-bottom:30px;
+}
+
+
+/* DEVELOPER BOX */
+
+.developer-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(212,175,55,.15);
+
+    backdrop-filter:
+    blur(15px);
+}
+
+
+.developer-text{
+
+    color:#bdbdbd;
+}
+
+
+.developer-name{
+
+    color:var(--gold);
+
+    margin:10px 0;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+}
+
+
+.developer-subtitle{
+
+    color:var(--text);
+
+    margin-top:10px;
+
+    line-height:1.8;
+}
+
+
+.developer-link{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.developer-link:hover{
+
+    color:white;
+
+    transform:translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .footer{
+        padding:70px 6% 40px;
+    }
+
+    .footer-title{
+        font-size:1.7rem;
+    }
+
+    .developer-name{
+        font-size:1.5rem;
+    }
+
+    .social-btn{
+        width:100%;
+        justify-content:center;
+    }
 
 }
 /*==========================
