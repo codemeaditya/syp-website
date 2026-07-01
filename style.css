@@ -1679,31 +1679,18 @@ FLOATING WHATSAPP BUTTON
     0 15px 35px rgba(37,211,102,.4);
 }
 
-@media(max-width:768px){
 
-    .floating-whatsapp{
-
-        bottom:20px;
-
-        right:20px;
-
-        padding:13px 20px;
-
-        font-size:14px;
-    }
-
-}
-
-/*==========================
+/* ==========================
 BACK TO TOP BUTTON
-===========================*/
+========================== */
 
 #backToTop{
 
     position:fixed;
 
-    bottom:30px;
-    right:30px;
+    bottom:100px; /* WhatsApp ke upar */
+
+    right:25px;
 
     width:55px;
     height:55px;
@@ -1731,13 +1718,14 @@ BACK TO TOP BUTTON
     0 10px 25px rgba(212,175,55,.35);
 
     opacity:0;
+
     visibility:hidden;
 
     transform:translateY(20px);
 
     transition:.35s ease;
 
-    z-index:999;
+    z-index:9998;
 }
 
 #backToTop.show{
@@ -1751,13 +1739,28 @@ BACK TO TOP BUTTON
 
 #backToTop:hover{
 
-    transform:translateY(-5px);
+    transform:
+    translateY(-5px);
 
     box-shadow:
     0 15px 35px rgba(212,175,55,.5);
 }
 
+
+/* MOBILE */
+
 @media(max-width:768px){
+
+    .floating-whatsapp{
+
+        bottom:20px;
+
+        right:20px;
+
+        padding:13px 20px;
+
+        font-size:14px;
+    }
 
     #backToTop{
 
@@ -1767,7 +1770,8 @@ BACK TO TOP BUTTON
         font-size:22px;
 
         right:20px;
-        bottom:20px;
+
+        bottom:90px; /* Mobile me bhi WhatsApp ke upar */
     }
 
 }
