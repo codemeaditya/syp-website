@@ -90,54 +90,22 @@ document.querySelectorAll("#nav a").forEach(link => {
     
 });
 
-/* Bahar click karne par menu band */
-
 document.addEventListener("click", (e) => {
-    
+
     if (
         !nav.contains(e.target) &&
         !menuToggle.contains(e.target)
     ) {
-        
+
         nav.classList.remove("active");
-        
+
     }
-    
-});
-/* =========================
-   OUTSIDE CLICK CLOSE
-========================= */
 
-document.addEventListener("click", (e) => {
-    
-    if (
-        !nav.contains(e.target) &&
-        !menuToggle.contains(e.target)
-    ) {
-        
-        nav.classList.remove("show");
-        
-    }
-    
 });
 
 
-/* =========================
-   CLOSE MENU ON LINK CLICK
-========================= */
 
-const navLinks =
-    document.querySelectorAll("#nav a");
 
-navLinks.forEach((link) => {
-    
-    link.addEventListener("click", () => {
-        
-        nav.classList.remove("show");
-        
-    });
-    
-});
 
 
 /* =========================
@@ -212,18 +180,22 @@ const heroContent =
 let mouseX = 0;
 let mouseY = 0;
 
+if(window.innerWidth > 768){
+
 document.addEventListener("mousemove", (e) => {
-    
+
     mouseX =
         (e.clientX / window.innerWidth - 0.5) * 15;
-    
+
     mouseY =
         (e.clientY / window.innerHeight - 0.5) * 15;
-    
+
     heroContent.style.transform =
         `translate(${mouseX}px, ${mouseY}px)`;
-    
+
 });
+
+}
 
 
 /* =========================
@@ -240,31 +212,57 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1";
     
 });
-const counters=document.querySelectorAll(".counter");
+const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter=>{
+const startCounters = () => {
 
-const update=()=>{
+    counters.forEach(counter => {
 
-const target=+counter.getAttribute("data-target");
-const count=+counter.innerText;
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
 
-const increment=target/100;
+        const increment = Math.ceil(target / 80);
 
-if(count<target){
+        const updateCounter = () => {
 
-counter.innerText=Math.ceil(count+increment);
+            count += increment;
 
-setTimeout(update,20);
+            if (count < target) {
 
-}else{
+                counter.innerText = count;
 
-counter.innerText=target+"+";
+                requestAnimationFrame(updateCounter);
 
-}
+            } else {
 
-}
+                counter.innerText = target + "+";
 
-update();
+            }
+        };
 
+        updateCounter();
+    });
+
+};
+
+const statsSection = document.querySelector(".stats-section");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startCounters();
+
+            observer.unobserve(statsSection);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.4
 });
+
+observer.observe(statsSection);
