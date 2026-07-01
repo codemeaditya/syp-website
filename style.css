@@ -1632,10 +1632,6 @@ font-size:2rem;
 }
 
   }
-/* ==========================
-FLOATING WHATSAPP BUTTON
-========================== */
-
 .floating-whatsapp{
 
     position: fixed;
@@ -1643,12 +1639,10 @@ FLOATING WHATSAPP BUTTON
     bottom: 25px;
     right: 25px;
 
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
 
     background: #25D366;
-
-    color: white;
 
     border-radius: 50%;
 
@@ -1656,26 +1650,29 @@ FLOATING WHATSAPP BUTTON
     justify-content: center;
     align-items: center;
 
-    font-size: 32px;
+    font-size: 38px;
+
+    color: white;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.25);
+    0 8px 25px rgba(37,211,102,.45);
 
     z-index: 9999;
 
     transition: .3s ease;
 }
 
-.floating-whatsapp:hover{
-
-    transform:
-    translateY(-5px)
-    scale(1.1);
-
-    box-shadow:
-    0 15px 35px rgba(37,211,102,.4);
+.floating-whatsapp i{
+    font-size: 34px;
 }
 
+.floating-whatsapp:hover{
+
+    transform: scale(1.1);
+
+    box-shadow:
+    0 12px 35px rgba(37,211,102,.6);
+}
 
 /* ==========================
 BACK TO TOP BUTTON
