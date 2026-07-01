@@ -891,7 +891,51 @@ rgba(255,255,255,.04);
 backdrop-filter:blur(14px);
 
 }
+/*==========================
+QUICK LINKS
+===========================*/
 
+.quick-links{
+    margin:35px 0;
+}
+
+.quick-links h3{
+    color:var(--gold);
+    font-size:1.4rem;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.quick-links-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+.quick-links-grid a{
+    color:var(--text);
+    font-weight:500;
+    transition:.3s ease;
+    padding:8px;
+    border-radius:10px;
+}
+
+.quick-links-grid a:hover{
+    color:var(--gold);
+    background:rgba(212,175,55,.08);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .quick-links-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+  }
 /*==========================
 PREMIUM FOOTER
 ===========================*/
