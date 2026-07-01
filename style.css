@@ -1769,3 +1769,38 @@ BACK TO TOP BUTTON
     }
 
 }
+/* Large Desktop */
+@media (min-width:1600px){
+
+    .hero-content,
+    .section-text,
+    .founder-card,
+    .register-card,
+    .contact-cta,
+    .developer-box{
+        max-width:1400px;
+    }
+
+    .card-grid{
+        grid-template-columns:
+        repeat(auto-fit,minmax(340px,1fr));
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .header{
+        padding:15px 4%;
+    }
+
+    #nav{
+        gap:18px;
+    }
+
+    #nav a{
+        font-size:13px;
+    }
+
+}
